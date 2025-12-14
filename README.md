@@ -34,8 +34,8 @@ The application reads Spotify playback state, fetches timed lyrics (LRC), and up
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
+git clone https://github.com/Konmeo22132-alt/Discord-spotify-status-changer.git
+cd Discord-spotify-status-changer
 npm install
 npm run build
 ```
