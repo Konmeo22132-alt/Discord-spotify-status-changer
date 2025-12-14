@@ -1,0 +1,29 @@
+{
+  "credentials": {
+    "token": "",
+    "clientID": "",
+    "clientSecret": "",
+    "code": "",
+    "customRedirectUri": "",
+    "useExternalAuthServer": false,
+    "uuid": "",
+    "refreshToken": ""
+  },
+  "timings": {
+    "sendTimeOffset": -200,
+    "enableAutooffset": true,
+    "autooffset": 5
+  },
+  "view": {
+    "timestamp": false,
+    "label": false,
+    "advanced": {
+      "enabled": false,
+      "customStatus": "{lyrics}",
+      "customEmoji": ""
+    }
+  },
+  "update": {
+    "enableAutoupdate": false
+  }
+}
