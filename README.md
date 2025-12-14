@@ -94,7 +94,8 @@ https://domain.com/callback?code=XXXX
 
 Copy the code parameter.
 
-🌐 Localhost + ngrok (HTTPS)
+</details>
+<summary><strong>🌐 Localhost + ngrok (HTTPS)</strong></summary>
 
 <details>
 <summary><strong>Why ngrok is required/How to use ngrok to localhosf</strong></summary>Spotify requires HTTPS redirect URIs.
