@@ -28,8 +28,6 @@ The application reads Spotify playback state, fetches timed lyrics (LRC), and up
 - Node.js 18+ (Node 20 / 22 supported)
 - Spotify account (Premium recommended)
 - Spotify Developer App
-- Discord account (Custom Status enabled)
-- Internet connection
 
 ---
 
@@ -49,7 +47,6 @@ npm run build
 <details>
 <summary><strong>Get Discord User Token</strong></summary>
 1. Open Discord
-
 
 2. Open search bar on your browser.
    
@@ -104,13 +101,12 @@ Copy the code parameter.
 ngrok exposes your local server through a public HTTPS URL.
 
 </details><details>
-<summary><strong>Step 5 — Install ngrok</strong></summary>Download ngrok from https://ngrok.com/download
+<summary><strong>Install ngrok</strong></summary>Download ngrok from https://ngrok.com/download
 Extract the executable
-
 Verify installation:
-
+```
 ngrok version
-
+```
 </details><details>
 <summary><strong>Add ngrok Auth Token</strong></summary>Create or log in to your ngrok account
 Copy your Auth Token
@@ -151,13 +147,13 @@ Copy the code from the redirect URL.
 <summary><strong>Start the application</strong></summary>npm start
 
 Expected output:
-
+```
 Song: ...
 Author: ...
 Progress: 0:42
 Lyric: ...
 Lyrics source: ...
-
+```
 Discord Custom Status will update automatically.
 
 </details>
@@ -176,12 +172,8 @@ Refresh token missing or invalid
 </details><details>
 <summary><strong>No lyrics</strong></summary>Track has no synced lyrics available
 
-
 </details><details>
-<summary><strong>Status not updating</strong></summary>Discord rate limits
-
-Invalid Discord token
-
+<summary><strong>Status not updating</strong></summary>Discord rate limits because the lyrics update too fast (I set it to 200ms). You can change the time at settings.json
 
 </details>
 ---
