@@ -40,7 +40,7 @@ git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
 cd YOUR_REPO
 npm install
 npm run build
-
+```
 
 ---
 
@@ -59,7 +59,7 @@ npm run build
 4. Send any message
 
 
-5. Find a request and copy the Authorization header value
+5. Find a request and copy the token
 
 
 
@@ -67,10 +67,7 @@ Put it into settings.json:
 
 "token": "DISCORD_USER_TOKEN"
 
-</details>
----
-
-<details>
+</details><details>
 <summary><strong>Step 2 — Create Spotify Developer App</strong></summary>1. Go to https://developer.spotify.com/dashboard
 
 
@@ -86,16 +83,12 @@ Client Secret
 
 
 
-Add a Redirect URI (HTTPS required), for example:
+Add a Redirect URI (HTTPS required):
 
 https://domain.com/callback
 
-</details>
----
-
-<details>
-<summary><strong>Step 3 — Get Spotify Authorization Code</strong></summary>Open the following URL in your browser
-Replace CLIENT_ID and domain.com with your values:
+</details><details>
+<summary><strong>Step 3 — Get Spotify Authorization Code</strong></summary>Open the following URL in your browser:
 
 https://accounts.spotify.com/authorize?client_id=CLIENT_ID&response_type=code&redirect_uri=https%3A%2F%2Fdomain.com%2Fcallback&scope=user-read-playback-state%20user-read-currently-playing&show_dialog=true
 
@@ -105,10 +98,7 @@ https://domain.com/callback?code=XXXX
 
 Copy the code parameter.
 
-</details>
----
-
-<details>
+</details><details>
 <summary><strong>Step 4 — Create settings.json</strong></summary>Create settings.json in the project root:
 
 {
@@ -141,7 +131,7 @@ Copy the code parameter.
   }
 }
 
-On first run, the app will automatically exchange the authorization code for a refreshToken.
+On first run, the app will automatically exchange the authorization code for a refresh token.
 After that, the code field can be cleared.
 
 </details>
@@ -153,10 +143,7 @@ After that, the code field can be cleared.
 <summary><strong>Why ngrok is required</strong></summary>Spotify requires HTTPS redirect URIs.
 ngrok exposes your local server through a public HTTPS URL.
 
-</details>
----
-
-<details>
+</details><details>
 <summary><strong>Step 5 — Install ngrok</strong></summary>Download ngrok from https://ngrok.com/download
 Extract the executable
 
@@ -164,58 +151,33 @@ Verify installation:
 
 ngrok version
 
-</details>
----
+</details><details>
+<summary><strong>Step 6 — Add ngrok Auth Token</strong></summary>Create or log in to your ngrok account
+Copy your Auth Token
 
-<details>
-<summary><strong>Step 6 — Add ngrok Auth Token</strong></summary>1. Create or log in to your ngrok account
-
-
-2. Copy your Auth Token
-
-
-3. Run:
-
-
+Run:
 
 ngrok config add-authtoken YOUR_NGROK_TOKEN
 
-</details>
----
-
-<details>
+</details><details>
 <summary><strong>Step 7 — Start local callback server</strong></summary>Make sure your local server is running.
 Example callback endpoint:
 
 http://localhost:3000/callback
 
-</details>
----
-
-<details>
+</details><details>
 <summary><strong>Step 8 — Start ngrok tunnel</strong></summary>ngrok http 3000
 
 Copy the HTTPS forwarding URL shown in the terminal.
 
-</details>
----
-
-<details>
+</details><details>
 <summary><strong>Step 9 — Update Spotify Redirect URI (ngrok)</strong></summary>Add this Redirect URI to Spotify Developer Dashboard:
 
 https://xxxx.ngrok-free.dev/callback
 
-Notes:
+If the ngrok URL changes, you must update Spotify settings and re-authorize.
 
-Free ngrok URLs change on every restart
-
-If the URL changes, you must update Spotify settings and re-authorize
-
-
-</details>
----
-
-<details>
+</details><details>
 <summary><strong>Step 10 — Generate Authorization Code (ngrok)</strong></summary>https://accounts.spotify.com/authorize?client_id=CLIENT_ID&response_type=code&redirect_uri=https%3A%2F%2Fxxxx.ngrok-free.dev%2Fcallback&scope=user-read-playback-state%20user-read-currently-playing&show_dialog=true
 
 Copy the code from the redirect URL.
@@ -297,7 +259,7 @@ Telegram: YOUR_TELEGRAM_USERNAME
 
 📜 License
 
-MIT License (or your preferred license)
+MIT License
 
 
 ---
@@ -306,7 +268,7 @@ MIT License (or your preferred license)
 
 Spotify playback synced to Discord Custom Status
 
-OAuth handled via Authorization Code + Refresh Token
+OAuth via Authorization Code + Refresh Token
 
 ngrok used only for HTTPS when running locally
 
@@ -314,12 +276,3 @@ Designed for educational and experimental use
 
 
 Enjoy syncing your music with Discord 🎶
-
----
-
-Nếu bạn muốn:
-- đổi giọng văn **ngắn hơn / technical hơn**
-- thêm **screenshots / demo GIF**
-- hoặc tối ưu README để **open-source public**
-
-chỉ cần nói, tôi sẽ chỉnh **đúng format bạn đang dùng**, không phá cấu trúc.
