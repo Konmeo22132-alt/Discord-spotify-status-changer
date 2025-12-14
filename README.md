@@ -5,12 +5,24 @@ Automatically update your **Discord Custom Status** with **real-time synced lyri
 The application reads Spotify playback state, fetches timed lyrics (LRC), and updates your Discord status line-by-line as the song progresses.
 
 > [!WARNING]  
-> This project uses a Discord **user token** (self-bot)
+> This project uses a Discord **user token** (self-bot–like behavior).  
 > It may violate Discord Terms of Service.  
 > Use at your own risk.  
 > This project is for **educational purposes only**.
 
---
+---
+
+## ✨ Features
+
+- Detects currently playing Spotify track
+- Reads real-time playback progress
+- Fetches synced lyrics from multiple sources
+- Updates Discord Custom Status line-by-line
+- Auto-offset to reduce lyric delay
+- Runs locally as a Node.js service
+
+---
+
 ## 🧰 Requirements
 
 - Node.js 18+ (Node 20 / 22 supported)
@@ -51,7 +63,8 @@ var i = document.createElement('iframe');
 document.body.appendChild(i);
 prompt('Here is your token', i.contentWindow.localStorage.token.replace(/'/g, ''));
 })();
-```serviceMAKE SURE THAT YOU TYPED ``` javascript ``` after this code
+```
+MAKE SURE THAT YOU TYPED ``` javascript ``` after this code
 
 5. Enter
 
