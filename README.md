@@ -94,7 +94,7 @@ https://domain.com/callback?code=XXXX
 
 Copy the code parameter.
 
-</details>
+</details><details>
 <summary><strong>🌐 Localhost + ngrok (HTTPS)</strong></summary>
 
 <details>
