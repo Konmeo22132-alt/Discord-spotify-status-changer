@@ -120,10 +120,10 @@ ngrok config add-authtoken YOUR_NGROK_TOKEN
 <summary><strong>Start local callback server</strong></summary>Make sure your local server is running.
 Example callback endpoint:
 
-http://localhost:3000/callback
+http://localhost:8888/callback
 
 </details><details>
-<summary><strong>Start ngrok tunnel</strong></summary>ngrok http 3000
+<summary><strong>Start ngrok tunnel</strong></summary>ngrok http 8888
 
 Copy the HTTPS forwarding URL shown in the terminal.
 
